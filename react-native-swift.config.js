@@ -22,7 +22,6 @@ module.exports = {
         join(iosPath, "**", "*.xcodeproj", "*.pbxproj")
       ).filter(path => !path.includes("Pods"));
       projectsPaths.forEach(path => {
-        console.log("project path I am looking at is", path);
         const project = Xcode.project(path);
         project.parse(err => {
           const fp = project.getFirstProject();
