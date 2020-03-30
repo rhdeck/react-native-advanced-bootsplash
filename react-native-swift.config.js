@@ -4,6 +4,7 @@ const { readFileSync, writeFileSync, existsSync, mkdirSync } = require("fs");
 const { join, dirname, basename } = require("path");
 const { sync } = require("glob");
 module.exports = {
+  startupClasses: ["RNSBootsplash"],
   prelink: [
     () => {
       const assetsDir = join(process.cwd(), "assets");
@@ -31,6 +32,8 @@ module.exports = {
             null,
             fp
           );
+          if (!file) return;
+          console.log("COndinuting with file obj", file);
           file.uuid = project.generateUuid();
           const nts = project.pbxNativeTargetSection();
           for (var key in nts) {
