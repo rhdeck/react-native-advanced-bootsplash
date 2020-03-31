@@ -4,7 +4,7 @@ const { readFileSync, writeFileSync, existsSync, mkdirSync } = require("fs");
 const { join, dirname, basename } = require("path");
 const { sync } = require("glob");
 module.exports = {
-  startupClasses: ["RNSBootsplash"],
+  startupClasses: ["RNSBootsplash.RNSBootSplash"],
   prelink: [
     () => {
       const assetsDir = join(process.cwd(), "assets");
@@ -33,7 +33,6 @@ module.exports = {
             fp
           );
           if (!file) return;
-          console.log("COndinuting with file obj", file);
           file.uuid = project.generateUuid();
           const nts = project.pbxNativeTargetSection();
           for (var key in nts) {
@@ -46,7 +45,6 @@ module.exports = {
           //Look for the storyboard
           const out = project.writeSync();
           writeFileSync(path, out);
-          console.log("I wrote out", path);
         });
       });
 
