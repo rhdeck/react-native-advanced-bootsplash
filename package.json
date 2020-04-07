@@ -1,33 +1,28 @@
 {
-  "name": "@react-native-swift/bootsplash",
+  "name": "@react-native-advanced/bootsplash",
   "version": "1.1.0",
-  "description": "Bootsplash support for react-native-swift",
+  "description": "Bootsplash support for react-native-advanced",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhdeck/react-native-swift-bootsplash.git"
+    "url": "git+https://github.com/rhdeck/react-native-advanced-bootsplash.git"
   },
   "author": "Ray Deck",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rhdeck/react-native-swift-bootsplash/issues"
+    "url": "https://github.com/rhdeck/react-native-advanced-bootsplash/issues"
   },
-  "homepage": "https://github.com/rhdeck/react-native-swift-bootsplash#readme",
+  "homepage": "https://github.com/rhdeck/react-native-advanced-bootsplash#readme",
   "peerDependencies": {
-    "@react-native-swift/core": "^2.1.0",
     "react-native-bootsplash": "^2.1.0"
-  },
-  "react-native-swift": {
-    "startupClasses": [
-      "RNSBS"
-    ]
   },
   "dependencies": {
     "@raydeck/xcode": "^2.2.1",
     "glob": "^7.1.6",
-    "plist": "^3.0.1"
+    "plist": "^3.0.1",
+    "xml2js": "^0.4.23"
   }
 }
