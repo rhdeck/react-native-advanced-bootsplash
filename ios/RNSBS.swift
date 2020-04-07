@@ -1,7 +1,7 @@
 import ReactNativeSwiftRegistry
 @objc
 open class RNSBootSplash:NSObject, RNSStartable {
-    @objc public static func runOnStart() -> Void {
+    @objc public static func runOnStart(_ application:UIApplication) -> Void {
         let _ = RNSMainRegistry.addEvent(type: "app.didFinishLaunchingWithOptions", key: "bootsplash", callback: {data in
             if let ad = UIApplication.shared.delegate {
                 if let w = ad.window {
