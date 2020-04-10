@@ -20,6 +20,7 @@
     "react-native-bootsplash": "^2.1.0"
   },
   "dependencies": {
+    "@raydeck/react-native-utilities": "^1.0.3",
     "@raydeck/xcode": "^2.2.1",
     "glob": "^7.1.6",
     "plist": "^3.0.1",
