@@ -87,7 +87,6 @@ module.exports = {
           writeFileSync(xmlpath, new Builder().buildObject(o));
         })();
         await (async () => {
-          console.log("Starting to work with bootsplash manifest stuff");
           const xmlpath = join(
             path,
             "android",
@@ -122,7 +121,7 @@ module.exports = {
                 "android:name": "com.zoontek.rnbootsplash.RNBootSplashActivity",
                 "android:theme": "@style/BootTheme",
               },
-              "intent-filter": filters,
+              "intent-filter": filters.filter(Boolean),
             });
           }
           writeFileSync(xmlpath, new Builder().buildObject(o));
